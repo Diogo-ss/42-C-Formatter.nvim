@@ -6,7 +6,7 @@ M.opts = {
   filetypes = { c = true, h = true, cpp = true, hpp = true },
 }
 
-function M.set_equalprg(formatter)
+M.set_equalprg = function(formatter)
   local current_buf = api.nvim_get_current_buf()
   api.nvim_buf_set_option(current_buf, "equalprg", formatter)
 end
